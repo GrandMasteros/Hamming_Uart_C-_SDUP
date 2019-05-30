@@ -42,3 +42,15 @@ C:\EiT\Rok 4\SDUP_projekt\mpma_paramgen\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\De
 C:\EiT\Rok 4\SDUP_projekt\mpma_paramgen\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.exe
 C:\EiT\Rok 4\SDUP_projekt\mpma_paramgen\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.pdb
 C:\EiT\Rok 4\SDUP_projekt\mpma_paramgen\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.Hamming.resources
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\bin\Debug\UX_mPMA_ParamGen.exe.config
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\bin\Debug\UX_mPMA_ParamGen.exe
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\bin\Debug\UX_mPMA_ParamGen.pdb
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.csprojResolveAssemblyReference.cache
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.ComPort.resources
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.Hamming.resources
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.Logger.resources
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.MainForm.resources
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.PatternGenerator.resources
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.csproj.GenerateResource.Cache
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.exe
+C:\EiT\Rok 4\SDUP_projekt\Hamming_Uart_C-_SDUP\UX_mPMA_ParamGen\UX_mPMA_ParamGen\obj\Debug\UX_mPMA_ParamGen.pdb

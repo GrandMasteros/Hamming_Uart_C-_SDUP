@@ -22,6 +22,7 @@ namespace UX_mPMA_ParamGen
 		SerialPort serialPort;
 		Logger logger;
 		int timeout;
+		Hamming hamming;
 		
 		public ComPort()
 		{
@@ -78,6 +79,7 @@ namespace UX_mPMA_ParamGen
             RefreshButton.Enabled = false;
             ParityCombo.Enabled = false;
             StopBitsCombo.Enabled = false;
+            hamming.Enabled = true;
             //raiseEvent(ComPortOpened);
             OpenCloseButton.Text = "Close";
           }
@@ -107,6 +109,7 @@ namespace UX_mPMA_ParamGen
 	        RefreshButton.Enabled = true;
 	        ParityCombo.Enabled = true;
 	        StopBitsCombo.Enabled = true;
+	        hamming.Enabled = false;
 	        //raiseEvent(ComPortClosed);
 	        OpenCloseButton.Text = "Open";
       	}
@@ -118,7 +121,7 @@ namespace UX_mPMA_ParamGen
 	        RefreshButton.Enabled = true;
 	        ParityCombo.Enabled = true;
 	        StopBitsCombo.Enabled = true;
-	        
+	        hamming.Enabled = false;
 	        //raiseEvent(ComPortClosed);
 	        OpenCloseButton.Text = "Open";
         }
@@ -208,6 +211,9 @@ namespace UX_mPMA_ParamGen
 	{
 		serialPort = arg;
 	}
-    
+        public void SetHammingReference(Hamming arg)
+	{
+		hamming = arg;
+	}
 	}
 }

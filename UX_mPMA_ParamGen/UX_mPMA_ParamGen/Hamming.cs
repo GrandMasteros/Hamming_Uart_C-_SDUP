@@ -36,7 +36,7 @@ namespace UX_mPMA_ParamGen
 		{
 			
 		}
-		public void SetLogReference(Logger arg)
+	public void SetLogReference(Logger arg)
     {
       logger = arg;
     }

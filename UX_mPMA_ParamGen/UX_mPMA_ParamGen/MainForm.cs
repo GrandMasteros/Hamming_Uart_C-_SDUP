@@ -35,6 +35,9 @@ namespace UX_mPMA_ParamGen
 			//
 			comPort.SetLogReference(logger);
 			comPort.SetSerialPortReference(serialPort);
+			comPort.SetHammingReference(hamming1);
+			hamming1.SetLogReference(logger);
+			hamming1.Enabled = false;
 			//comPort.SetMainFormReference(mainForm);
 //			logger.Log("lll");
 			//logger1.
