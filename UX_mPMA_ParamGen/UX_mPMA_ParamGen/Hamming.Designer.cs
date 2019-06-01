@@ -40,6 +40,8 @@ namespace UX_mPMA_ParamGen
 			this.Coder = new System.Windows.Forms.Label();
 			this.Decoder = new System.Windows.Forms.Label();
 			this.textDecoder = new System.Windows.Forms.TextBox();
+			this.sendButtonCoder = new System.Windows.Forms.Button();
+			this.sendButtonDecoder = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// textCoder
@@ -77,19 +79,43 @@ namespace UX_mPMA_ParamGen
 			this.textDecoder.Size = new System.Drawing.Size(202, 45);
 			this.textDecoder.TabIndex = 2;
 			// 
+			// sendButtonCoder
+			// 
+			this.sendButtonCoder.Location = new System.Drawing.Point(26, 139);
+			this.sendButtonCoder.Name = "sendButtonCoder";
+			this.sendButtonCoder.Size = new System.Drawing.Size(157, 41);
+			this.sendButtonCoder.TabIndex = 5;
+			this.sendButtonCoder.Text = "Send&Receive Coder";
+			this.sendButtonCoder.UseVisualStyleBackColor = true;
+			this.sendButtonCoder.Click += new System.EventHandler(this.SendButtonCoderClick);
+			// 
+			// sendButtonDecoder
+			// 
+			this.sendButtonDecoder.Location = new System.Drawing.Point(310, 139);
+			this.sendButtonDecoder.Name = "sendButtonDecoder";
+			this.sendButtonDecoder.Size = new System.Drawing.Size(157, 41);
+			this.sendButtonDecoder.TabIndex = 6;
+			this.sendButtonDecoder.Text = "Send&Receive Decoder";
+			this.sendButtonDecoder.UseVisualStyleBackColor = true;
+			this.sendButtonDecoder.Click += new System.EventHandler(this.SendButtonDecoderClick);
+			// 
 			// Hamming
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.sendButtonDecoder);
+			this.Controls.Add(this.sendButtonCoder);
 			this.Controls.Add(this.Decoder);
 			this.Controls.Add(this.textDecoder);
 			this.Controls.Add(this.Coder);
 			this.Controls.Add(this.textCoder);
 			this.Name = "Hamming";
-			this.Size = new System.Drawing.Size(546, 169);
+			this.Size = new System.Drawing.Size(546, 200);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button sendButtonDecoder;
+		private System.Windows.Forms.Button sendButtonCoder;
 		private System.Windows.Forms.TextBox textDecoder;
 		private System.Windows.Forms.Label Decoder;
 		private System.Windows.Forms.Label Coder;

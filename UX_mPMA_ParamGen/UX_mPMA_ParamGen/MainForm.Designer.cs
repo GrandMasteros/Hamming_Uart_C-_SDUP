@@ -46,14 +46,14 @@ namespace UX_mPMA_ParamGen
 			// 
 			// comPort
 			// 
-			this.comPort.Location = new System.Drawing.Point(37, 444);
+			this.comPort.Location = new System.Drawing.Point(37, 524);
 			this.comPort.Name = "comPort";
 			this.comPort.Size = new System.Drawing.Size(864, 36);
 			this.comPort.TabIndex = 0;
 			// 
 			// logger
 			// 
-			this.logger.Location = new System.Drawing.Point(37, 187);
+			this.logger.Location = new System.Drawing.Point(37, 258);
 			this.logger.Name = "logger";
 			this.logger.Size = new System.Drawing.Size(864, 229);
 			this.logger.TabIndex = 1;
@@ -62,7 +62,7 @@ namespace UX_mPMA_ParamGen
 			// 
 			this.hamming1.Location = new System.Drawing.Point(37, 27);
 			this.hamming1.Name = "hamming1";
-			this.hamming1.Size = new System.Drawing.Size(530, 142);
+			this.hamming1.Size = new System.Drawing.Size(530, 209);
 			this.hamming1.TabIndex = 2;
 			// 
 			// MainForm
@@ -70,7 +70,7 @@ namespace UX_mPMA_ParamGen
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
-			this.ClientSize = new System.Drawing.Size(930, 507);
+			this.ClientSize = new System.Drawing.Size(946, 572);
 			this.Controls.Add(this.hamming1);
 			this.Controls.Add(this.logger);
 			this.Controls.Add(this.comPort);
