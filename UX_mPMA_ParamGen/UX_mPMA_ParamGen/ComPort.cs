@@ -82,6 +82,7 @@ namespace UX_mPMA_ParamGen
             hamming.Enabled = true;
             //raiseEvent(ComPortOpened);
             OpenCloseButton.Text = "Close";
+            serialPort.ReadTimeout=Int32.Parse(TimeoutTextBox.Text);
           }
           catch (UnauthorizedAccessException)
           {

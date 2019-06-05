@@ -21,14 +21,18 @@ namespace UX_mPMA_ParamGen
 	/// <summary>
 	/// Description of Hamming.
 	/// </summary>
+	/// 
 	public partial class Hamming : UserControl
 	{
-				        public const bool t = true;
+		const int Bytes2ValueMax = 100;
+		const int Bytes2Value10 = 10;
+		public const bool t = true;
         public const bool f = false;
         public const int startWith = 2;
 		Logger logger;
 		SerialPort serialPort;
 		string Data_TO_PRINT;
+		//int TimeoutException=1000;
 		public Hamming()
 		{
 			
@@ -41,7 +45,30 @@ namespace UX_mPMA_ParamGen
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-
+		
+		public string convert2BYTESvalue(string stringValue)
+		{
+			try
+			{	
+			int value =  Int32.Parse(stringValue);
+			if( (Bytes2Value10 <= value) && (value < Bytes2ValueMax))
+			{
+				return value.ToString();
+			}
+			else if((value >= 0) && (value < Bytes2Value10))
+			{
+				return ("0" + value.ToString());
+			}
+			logger.Log("Length Value not correct!");
+			return "00";
+			}
+			catch (Exception)
+			{
+				logger.Log("Length Value not correct!");
+				return "00";
+        	}
+		}
+		
         static bool[] Encode(bool[] code, int length)
         {
             var encoded = new bool[length];
@@ -107,29 +134,39 @@ namespace UX_mPMA_ParamGen
 	    {
 	    	logger = arg;
 	    }
-			public void SetSerialPortReference(SerialPort arg)
+		
+		public void SetSerialPortReference(SerialPort arg)
 		{
 			serialPort = arg;
 		}
 		
 		void SendButtonCoderClick(object sender, EventArgs e)
 		{
-			serialPort.Write("Coder" + textCoder.Text);
-			logger.Log("Data: " + "Coder" + textCoder.Text);
-			for(int i=0; i<5;i++)
-			{
-            	Data_TO_PRINT=Data_TO_PRINT+serialPort.ReadLine();  
+			serialPort.Write("K" + convert2BYTESvalue(textBoxCoderLength.Text) + textCoder.Text + '\n');
+			logger.Log("Data: " + "K" + convert2BYTESvalue(textBoxCoderLength.Text) + textCoder.Text);
+			try
+	        {
+	            Data_TO_PRINT=serialPort.ReadLine();  
+	        }
+        	catch (TimeoutException) 
+        	{
+        		logger.Log("Data not received Timeout");
 			}
 			logger.Log("Read data: "+ Data_TO_PRINT);
 		}
 		
+		
 		void SendButtonDecoderClick(object sender, EventArgs e)
 		{
-			serialPort.Write("Decoder" + textDecoder.Text);
-			logger.Log("Data: " + "Decoder" + textDecoder.Text);
-			for(int i=0; i<5;i++)
-			{
-            	Data_TO_PRINT=Data_TO_PRINT+serialPort.ReadLine();  
+			serialPort.Write("D" + convert2BYTESvalue(textBoxDecoderLength.Text) + textDecoder.Text + '\n');
+			logger.Log("Data: " + "D" + convert2BYTESvalue(textBoxDecoderLength.Text) + textDecoder.Text);
+			try
+	        {
+	            Data_TO_PRINT=serialPort.ReadLine();  
+	        }
+        	catch (TimeoutException) 
+        	{
+        		logger.Log("Data not received Timeout");
 			}
 			logger.Log("Read data: "+ Data_TO_PRINT);
 		}
@@ -171,4 +208,6 @@ namespace UX_mPMA_ParamGen
                 .Aggregate((x, y) => x ^ y);
         }
     }
+	    
 }
+
