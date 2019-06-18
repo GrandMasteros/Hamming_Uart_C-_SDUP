@@ -31,8 +31,6 @@ namespace UX_mPMA_ParamGen
         public const int startWith = 2;
 		Logger logger;
 		SerialPort serialPort;
-		string Data_TO_PRINT;
-		//int TimeoutException=1000;
 		public Hamming()
 		{
 			
@@ -142,32 +140,20 @@ namespace UX_mPMA_ParamGen
 		
 		void SendButtonCoderClick(object sender, EventArgs e)
 		{
-			serialPort.Write("K" + convert2BYTESvalue(textBoxCoderLength.Text) + textCoder.Text + '\n');
-			logger.Log("Data: " + "K" + convert2BYTESvalue(textBoxCoderLength.Text) + textCoder.Text);
-			try
-	        {
-	            Data_TO_PRINT=serialPort.ReadLine();  
-	        }
-        	catch (TimeoutException) 
-        	{
-        		logger.Log("Data not received Timeout");
-			}
+			string Data_TO_PRINT;
+			serialPort.Write("1" + convert2BYTESvalue(textBoxCoderLength.Text) + textCoder.Text + '\n');
+			logger.Log("Data: " + "1" + convert2BYTESvalue(textBoxCoderLength.Text) + textCoder.Text);
+			Data_TO_PRINT=serialPort.ReadExisting();
 			logger.Log("Read data: "+ Data_TO_PRINT);
 		}
 		
 		
 		void SendButtonDecoderClick(object sender, EventArgs e)
 		{
-			serialPort.Write("D" + convert2BYTESvalue(textBoxDecoderLength.Text) + textDecoder.Text + '\n');
-			logger.Log("Data: " + "D" + convert2BYTESvalue(textBoxDecoderLength.Text) + textDecoder.Text);
-			try
-	        {
-	            Data_TO_PRINT=serialPort.ReadLine();  
-	        }
-        	catch (TimeoutException) 
-        	{
-        		logger.Log("Data not received Timeout");
-			}
+			string Data_TO_PRINT;
+			serialPort.Write("0" + convert2BYTESvalue(textBoxDecoderLength.Text) + textDecoder.Text + '\n');
+			logger.Log("Data: " + "0" + convert2BYTESvalue(textBoxDecoderLength.Text) + textDecoder.Text);
+	        Data_TO_PRINT=serialPort.ReadExisting();  
 			logger.Log("Read data: "+ Data_TO_PRINT);
 		}
 	}
